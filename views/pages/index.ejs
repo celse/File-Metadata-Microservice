@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-info-sign"></span> File upload</h3>
+       <form action="/file-load-size" method="post" enctype="multipart/form-data">
+        <!-- input type="file" class="btn btn-lg btn-primary" name="avatar"><br-->
+        <div style="position:relative;">
+          <a class='btn btn-primary' href='javascript:;'>
+            Choose File...
+            <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="avatar" size="140"  onchange='$("#upload-file-info").html($(this).val());'>
+          </a>
+          &nbsp;
+          <span class='label label-info' id="upload-file-info"></span>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-lg btn-primary" value="Submit file ">
+      </form> 
+    </div>
+
+  </div> <!-- row -->
+  <hr>
+   <div class="alert alert-info text-center" role="alert">
+    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+  </div>
+</div>
+
+
+</body>
+</html>
